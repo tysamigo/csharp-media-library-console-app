@@ -1,0 +1,13 @@
+C:\Users\AsuS\source\project-csharp-media-library-console-app\obj\Debug\netcoreapp3.1\project-csharp-media-library-console-app.csprojAssemblyReference.cache
+C:\Users\AsuS\source\project-csharp-media-library-console-app\obj\Debug\netcoreapp3.1\project-csharp-media-library-console-app.AssemblyInfoInputs.cache
+C:\Users\AsuS\source\project-csharp-media-library-console-app\obj\Debug\netcoreapp3.1\project-csharp-media-library-console-app.AssemblyInfo.cs
+C:\Users\AsuS\source\project-csharp-media-library-console-app\obj\Debug\netcoreapp3.1\project-csharp-media-library-console-app.csproj.CoreCompileInputs.cache
+C:\Users\AsuS\source\project-csharp-media-library-console-app\bin\Debug\netcoreapp3.1\project-csharp-media-library-console-app.exe
+C:\Users\AsuS\source\project-csharp-media-library-console-app\bin\Debug\netcoreapp3.1\project-csharp-media-library-console-app.deps.json
+C:\Users\AsuS\source\project-csharp-media-library-console-app\bin\Debug\netcoreapp3.1\project-csharp-media-library-console-app.runtimeconfig.json
+C:\Users\AsuS\source\project-csharp-media-library-console-app\bin\Debug\netcoreapp3.1\project-csharp-media-library-console-app.runtimeconfig.dev.json
+C:\Users\AsuS\source\project-csharp-media-library-console-app\bin\Debug\netcoreapp3.1\project-csharp-media-library-console-app.dll
+C:\Users\AsuS\source\project-csharp-media-library-console-app\bin\Debug\netcoreapp3.1\project-csharp-media-library-console-app.pdb
+C:\Users\AsuS\source\project-csharp-media-library-console-app\obj\Debug\netcoreapp3.1\project-csharp-media-library-console-app.dll
+C:\Users\AsuS\source\project-csharp-media-library-console-app\obj\Debug\netcoreapp3.1\project-csharp-media-library-console-app.pdb
+C:\Users\AsuS\source\project-csharp-media-library-console-app\obj\Debug\netcoreapp3.1\project-csharp-media-library-console-app.genruntimeconfig.cache

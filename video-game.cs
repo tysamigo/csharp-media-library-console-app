@@ -6,4 +6,5 @@ namespace project_csharp_media_library_console_app
         public string Platform;
         public string YearReleased;
         public string Developers;
+    }
 }
