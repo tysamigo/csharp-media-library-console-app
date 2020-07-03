@@ -5,5 +5,12 @@ namespace project_csharp_media_library_console_app
         public string Title;
         public string Artist;
         public string YearReleased;
+
+        public Album(string title, string artist, string yearReleased)
+        {
+            Title = title;
+            Artist = artist;
+            YearReleased = yearReleased;
+        }
     }
 }
