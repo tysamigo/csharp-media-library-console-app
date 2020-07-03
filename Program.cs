@@ -11,10 +11,10 @@ namespace project_csharp_media_library_console_app
             var movie = new Movie("Star Wars", "George Lucas", "1977");
             var videoGame = new VideoGame("Halo", "Xbox", "2001", "Bungie");
 
-            Console.WriteLine("Album: " + '"' + album.Title + '"' + " by " + album.Artist + " released in " + album.YearReleased);
-            Console.WriteLine("Book: " + '"' + book.Title + '"' + " by " + book.Author + " released in " + book.YearReleased);
-            Console.WriteLine("Movie: " + '"' + movie.Title + '"' + " by " + movie.Director + " released in " + movie.YearReleased);
-            Console.WriteLine("Video Game: " + '"' + videoGame.Title + '"' + " on the " + videoGame.Platform + " platform released in " + videoGame.YearReleased + " by " + videoGame.Developers + ".");
+            Console.WriteLine(album.GetDisplayText());
+            Console.WriteLine(book.GetDisplayText());
+            Console.WriteLine(movie.GetDisplayText());
+            Console.WriteLine(videoGame.GetDisplayText());
         }
     }
 }
