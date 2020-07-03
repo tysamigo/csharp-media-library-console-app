@@ -12,5 +12,10 @@ namespace project_csharp_media_library_console_app
             Director = director;
             YearReleased = yearReleased;
         }
+
+        public string GetDisplayText()
+        {
+            return ("Movie: " + '"' + Title + '"' + " by " + Director + " released in " + YearReleased);
+        }
     }
 }

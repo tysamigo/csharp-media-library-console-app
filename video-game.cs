@@ -14,5 +14,10 @@ namespace project_csharp_media_library_console_app
             YearReleased = yearReleased;
             Developers = developers;
         }
+
+        public string GetDisplayText()
+        {
+            return ("Video Game: " + '"' + Title + '"' + " on the " + Platform + " platform released in " + YearReleased + " by " + Developers + ".");
+        }
     }
 }

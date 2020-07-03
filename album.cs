@@ -12,5 +12,10 @@ namespace project_csharp_media_library_console_app
             Artist = artist;
             YearReleased = yearReleased;
         }
+
+        public string GetDisplayText()
+        {
+            return ("Album: " + '"' + Title + '"' + " by " + Artist + " released in " + YearReleased);
+        }
     }
 }

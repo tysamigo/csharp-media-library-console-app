@@ -12,5 +12,10 @@ namespace project_csharp_media_library_console_app
             Author = author;
             YearReleased = yearReleased;
         }
+
+        public string GetDisplayText()
+        {
+            return ("Book: " + '"' + Title + '"' + " by " + Author + " released in " + YearReleased);
+        }
     }
 }
