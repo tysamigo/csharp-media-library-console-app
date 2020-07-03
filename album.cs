@@ -5,6 +5,8 @@ namespace project_csharp_media_library_console_app
         public readonly string Title;
         public readonly string Artist;
         public readonly string YearReleased;
+        public string Loanee;
+        public bool OnLoan;
 
         public Album(string title, string artist, string yearReleased)
         {
@@ -13,9 +15,40 @@ namespace project_csharp_media_library_console_app
             YearReleased = yearReleased;
         }
 
+        public void LoanMedia()
+        {
+            OnLoan = true;
+        }
+        
+        public void LoanMedia(string loanee)
+        {
+            Loanee = loanee;
+            LoanMedia();
+        }
+
+        public void ReturnMedia()
+        {
+            Loanee = null;
+            OnLoan = false;
+        }
+
         public string GetDisplayText()
         {
-            return ("Album: " + '"' + Title + '"' + " by " + Artist + " released in " + YearReleased);
+            string text = "Album: " + '"' + Title + '"' + " by " + Artist + " released in " + YearReleased;
+
+            if (OnLoan)
+            {
+                if (!string.IsNullOrEmpty(Loanee))
+                {
+                    text += " - (Currently on loan to " + Loanee + ")";
+                }
+                else
+                {
+                    text += " - (Currently on loan)";
+                }                
+            }
+
+            return text;
         }
     }
 }
