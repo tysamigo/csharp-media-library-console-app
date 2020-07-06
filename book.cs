@@ -1,12 +1,11 @@
 namespace project_csharp_media_library_console_app
 {
-    class Book
+    class Book : MediaType
     {
-        public readonly string Title;
         public readonly string Author;
-        public readonly string YearReleased;
 
         public Book(string title, string author, string yearReleased)
+        : base(title, yearReleased)
         {
             Title = title;
             Author = author;

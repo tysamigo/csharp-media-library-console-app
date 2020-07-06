@@ -1,18 +1,15 @@
 namespace project_csharp_media_library_console_app
 {
-    class Album
+    class Album : MediaType
     {
-        public readonly string Title;
         public readonly string Artist;
-        public readonly string YearReleased;
         public string Loanee;
         public bool OnLoan;
 
-        public Album(string title, string artist, string yearReleased)
+        public Album(string title, string artist, string yearReleased) 
+        : base(title, yearReleased)
         {
-            Title = title;
             Artist = artist;
-            YearReleased = yearReleased;
         }
 
         public void LoanMedia()
