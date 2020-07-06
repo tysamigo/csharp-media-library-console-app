@@ -12,7 +12,7 @@ namespace project_csharp_media_library_console_app
 
         public string GetDisplayText()
         {
-            string text = "Album: " + '"' + Title + '"' + " by " + Author + " released in " + YearReleased;
+            string text = "Book: " + '"' + Title + '"' + " by " + Author + " released in " + YearReleased;
 
             if (OnLoan)
             {
