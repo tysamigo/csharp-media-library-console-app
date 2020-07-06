@@ -14,6 +14,12 @@ namespace project_csharp_media_library_console_app
             var videoGame = new VideoGame("Halo", "Xbox", "2001", "Bungie");            
             var videoGame1 = new VideoGame("Call of Duty", "Xbox", "2003", "Activision");
 
+            DetectMediaType(album);
+            DetectMediaType(album1);
+            DetectMediaType(book);
+            DetectMediaType(movie1);
+            DetectMediaType(videoGame1);
+
             Console.WriteLine(album.GetDisplayText());
             Console.WriteLine(album1.GetDisplayText());
             Console.WriteLine(book.GetDisplayText());
@@ -43,6 +49,22 @@ namespace project_csharp_media_library_console_app
             Console.WriteLine(album1.GetDisplayText());
             Console.WriteLine(movie1.GetDisplayText());
             Console.WriteLine(videoGame1.GetDisplayText());
+        }
+
+        static void DetectMediaType(MediaType item)
+        {
+            if (item is Album)
+            {
+                Console.WriteLine(item.Title + " is an Album");
+            }
+            else if (item is Book)
+            {
+                Console.WriteLine(item.Title + " is a Book");
+            }
+            else if (item is Movie)
+            {
+                Console.WriteLine(item.Title + " is a Movie");
+            }
         }
     }
 }
