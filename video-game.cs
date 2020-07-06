@@ -8,9 +8,7 @@ namespace project_csharp_media_library_console_app
         public VideoGame(string title, string platform, string yearReleased, string developers)
         : base(title, yearReleased)
         {
-            Title = title;
             Platform = platform;
-            YearReleased = yearReleased;
             Developers = developers;
         }
 

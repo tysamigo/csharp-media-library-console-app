@@ -7,9 +7,7 @@ namespace project_csharp_media_library_console_app
         public Book(string title, string author, string yearReleased)
         : base(title, yearReleased)
         {
-            Title = title;
             Author = author;
-            YearReleased = yearReleased;
         }
 
         public string GetDisplayText()
