@@ -14,7 +14,7 @@ namespace project_csharp_media_library_console_app
 
         public string GetDisplayText()
         {
-            string text = "Video Game: " + '"' + Title + '"' + " by " + Developers + " for the " + Platform + " released in " + YearReleased;
+            string text = "Video Game: " + '"' + Title + '"' + " by " + Developers + " for the " + Platform + " platform released in " + YearReleased;
 
             if (OnLoan)
             {
