@@ -1,3 +1,5 @@
+using System;
+
 namespace project_csharp_media_library_console_app
 {
     class MediaType
@@ -9,6 +11,11 @@ namespace project_csharp_media_library_console_app
 
         public MediaType(string title, string yearReleased)
         {
+            if(string.IsNullOrEmpty(title))
+            {
+                throw new Exception("A media type must have a title");
+            }
+            
             Title = title;
             YearReleased = yearReleased;
         }
