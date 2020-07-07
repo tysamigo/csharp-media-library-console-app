@@ -6,49 +6,58 @@ namespace project_csharp_media_library_console_app
     {
         static void Main(string[] args)
         {
-            var album = new Album("A Place To Be Real", "Day.Din", "2009");
-            var album1 = new Album("Bad", "Michael Jackson", "1987");
-            var book = new Book("The God Delusion", "Richard Dawkins", "2006");
-            var movie = new Movie("Star Wars", "George Lucas", "1977");
-            var movie1 = new Movie("Battlestar Galactica", "Ronald D. Moore", "1978");
-            var videoGame = new VideoGame("Halo", "Xbox", "2001", "Bungie");            
-            var videoGame1 = new VideoGame("Call of Duty", "Xbox", "2003", "Activision");
+            try
+            {
+                var album = new Album("A Place To Be Real", "Day.Din", "2009");
+                var album1 = new Album("Bad", "Michael Jackson", "1987");
+                var book = new Book("The God Delusion", "Richard Dawkins", "2006");
+                var movie = new Movie("Star Wars", "George Lucas", "1977");
+                var movie1 = new Movie("Battlestar Galactica", "Ronald D. Moore", "1978");
+                var videoGame = new VideoGame("Halo", "Xbox", "2001", "Bungie");            
+                var videoGame1 = new VideoGame("Call of Duty", "Xbox", "2003", "Activision");
 
-            DetectMediaType(album);
-            DetectMediaType(album1);
-            DetectMediaType(book);
-            DetectMediaType(movie1);
-            DetectMediaType(videoGame1);
+                DetectMediaType(album);
+                DetectMediaType(album1);
+                DetectMediaType(book);
+                DetectMediaType(movie1);
+                DetectMediaType(videoGame1);
+                Console.WriteLine(" ");
+               
+                Console.WriteLine(album.GetDisplayText());
+                Console.WriteLine(album1.GetDisplayText());
+                Console.WriteLine(book.GetDisplayText());
+                Console.WriteLine(movie.GetDisplayText());
+                Console.WriteLine(movie1.GetDisplayText());
+                Console.WriteLine(videoGame.GetDisplayText());
+                Console.WriteLine(videoGame1.GetDisplayText());
+                Console.WriteLine(" ");
 
-            Console.WriteLine(album.GetDisplayText());
-            Console.WriteLine(album1.GetDisplayText());
-            Console.WriteLine(book.GetDisplayText());
-            Console.WriteLine(movie.GetDisplayText());
-            Console.WriteLine(movie1.GetDisplayText());
-            Console.WriteLine(videoGame.GetDisplayText());
-            Console.WriteLine(videoGame1.GetDisplayText());
-            Console.WriteLine(" ");
-
-            album.LoanMedia("Tyler Ramage");
-            album1.LoanMedia();
-            movie1.LoanMedia("Lacey Ramage");
-            videoGame1.LoanMedia("Tyler Ramage");
+                album.LoanMedia("Tyler Ramage");
+                album1.LoanMedia();
+                movie1.LoanMedia("Lacey Ramage");
+                videoGame1.LoanMedia("Tyler Ramage");
 
 
-            Console.WriteLine(album.GetDisplayText());
-            Console.WriteLine(album1.GetDisplayText());
-            Console.WriteLine(movie1.GetDisplayText());
-            Console.WriteLine(videoGame1.GetDisplayText());
+                Console.WriteLine(album.GetDisplayText());
+                Console.WriteLine(album1.GetDisplayText());
+                Console.WriteLine(movie1.GetDisplayText());
+                Console.WriteLine(videoGame1.GetDisplayText());
+                Console.WriteLine(" ");
 
-            album.ReturnMedia();
-            album1.ReturnMedia();
-            movie1.ReturnMedia();
-            videoGame1.ReturnMedia();
+                album.ReturnMedia();
+                album1.ReturnMedia();
+                movie1.ReturnMedia();
+                videoGame1.ReturnMedia();
 
-            Console.WriteLine(album.GetDisplayText());
-            Console.WriteLine(album1.GetDisplayText());
-            Console.WriteLine(movie1.GetDisplayText());
-            Console.WriteLine(videoGame1.GetDisplayText());
+                Console.WriteLine(album.GetDisplayText());
+                Console.WriteLine(album1.GetDisplayText());
+                Console.WriteLine(movie1.GetDisplayText());
+                Console.WriteLine(videoGame1.GetDisplayText());
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.Message);
+            }           
         }
 
         static void DetectMediaType(MediaType item)
@@ -61,10 +70,14 @@ namespace project_csharp_media_library_console_app
             {
                 Console.WriteLine(item.Title + " is a Book");
             }
-            // else if (item is Movie)
-            // {
-            //     Console.WriteLine(item.Title + " is a Movie");
-            // }
+            else if (item is Movie)
+            {
+                Console.WriteLine(item.Title + " is a Movie");
+            }
+            else if (item is VideoGame)
+            {
+                Console.WriteLine(item.Title + " is a Video Game");
+            }
             else
             {
                 throw new Exception("Unexpected media subtype encountered");
