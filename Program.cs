@@ -61,9 +61,13 @@ namespace project_csharp_media_library_console_app
             {
                 Console.WriteLine(item.Title + " is a Book");
             }
-            else if (item is Movie)
+            // else if (item is Movie)
+            // {
+            //     Console.WriteLine(item.Title + " is a Movie");
+            // }
+            else
             {
-                Console.WriteLine(item.Title + " is a Movie");
+                throw new Exception("Unexpected media subtype encountered");
             }
         }
     }
