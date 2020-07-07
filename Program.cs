@@ -28,6 +28,14 @@ namespace project_csharp_media_library_console_app
                 DetectMediaType(items[5]);
                 DetectMediaType(items[6]);
                 Console.WriteLine(" ");
+
+                Display(items[0]);
+                Display(items[1]);
+                Display(items[2]);
+                Display(items[3]);
+                Display(items[4]);
+                Display(items[5]);
+                Display(items[6]);
                
                 // Console.WriteLine(album.GetDisplayText());
                 // Console.WriteLine(album1.GetDisplayText());
@@ -64,6 +72,35 @@ namespace project_csharp_media_library_console_app
             {
                 Console.WriteLine("Exception: " + ex.Message);
             }           
+        }
+
+        static void Display(MediaType item)
+        {
+            if (item is Album)
+            {
+                // using Explicit Cast but don't understand
+                var album = (Album)item;
+                Console.WriteLine(album.GetDisplayText());                
+            }
+            else if (item is Book)
+            {
+                var book = (Book)item;
+                Console.WriteLine(book.GetDisplayText());                
+            }
+            else if (item is Movie)
+            {
+                var movie = (Movie)item;
+                Console.WriteLine(movie.GetDisplayText());                
+            }
+            else if (item is VideoGame)
+            {
+                var videoGame = (VideoGame)item;
+                Console.WriteLine(videoGame.GetDisplayText());                
+            }
+            else
+            {
+                throw new Exception("Unexpected media subtype encountered");
+            }
         }
 
         static void DetectMediaType(MediaType item)
