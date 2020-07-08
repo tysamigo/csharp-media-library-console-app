@@ -75,6 +75,12 @@ namespace project_csharp_media_library_console_app
 
         static void Display(MediaType item)
         {
+            
+            if (item == null)
+            {
+                return;
+            }
+            
             if (item is Album)
             {
                 // using Explicit Cast but don't understand
@@ -104,6 +110,11 @@ namespace project_csharp_media_library_console_app
 
         static void DetectMediaType(MediaType item)
         {
+            if (item == null)
+            {
+                return;
+            }
+            
             if (item is Album)
             {
                 Console.WriteLine(item.Title + " is an Album");
