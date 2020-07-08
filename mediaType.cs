@@ -4,7 +4,15 @@ namespace project_csharp_media_library_console_app
 {
     class MediaType
     {
-        public string Title;
+        // private readonly string _title;
+
+        // public string Title
+        // {
+        //     get { return _title;}
+        // }
+
+        public string Title { get; private set; }
+
         public string YearReleased;
         public string Loanee;
         public bool OnLoan;
@@ -14,8 +22,7 @@ namespace project_csharp_media_library_console_app
             if(string.IsNullOrEmpty(title))
             {
                 throw new Exception("A media type must have a title");
-            }
-            
+            }            
             Title = title;
             YearReleased = yearReleased;
         }
