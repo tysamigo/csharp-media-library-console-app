@@ -35,6 +35,7 @@ namespace project_csharp_media_library_console_app
                 Display(mediaLibrary.GetItemAt(4));
                 Display(mediaLibrary.GetItemAt(5));
                 Display(mediaLibrary.GetItemAt(6));
+                Display(mediaLibrary.GetItemAt(7));
                
                 // Console.WriteLine(album.GetDisplayText());
                 // Console.WriteLine(album1.GetDisplayText());

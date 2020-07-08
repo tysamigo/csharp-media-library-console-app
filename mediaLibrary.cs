@@ -17,6 +17,7 @@ namespace project_csharp_media_library_console_app
             }
             else
             {
+                System.Console.WriteLine("An element at index " + index + " doesn't exist in the media library.");
                 return null;
             }            
 
