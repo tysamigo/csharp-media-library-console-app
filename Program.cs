@@ -8,8 +8,7 @@ namespace project_csharp_media_library_console_app
         {
             try
             {                
-                // var items = new MediaType[]
-                MediaType[] items = 
+                var mediaLibrary = new MediaLibrary(new MediaType[]
                 {
                     new Album("A Place To Be Real", "Day.Din", "2009"),
                     new Album("Bad", "Michael Jackson", "1987"),
@@ -18,24 +17,24 @@ namespace project_csharp_media_library_console_app
                     new Movie("Battlestar Galactica", "Ronald D. Moore", "1978"),
                     new VideoGame("Halo", "Xbox", "2001", "Bungie"),   
                     new VideoGame("Call of Duty", "Xbox", "2003", "Activision")
-                };               
+                });                         
                 
-                DetectMediaType(items[0]);
-                DetectMediaType(items[1]);
-                DetectMediaType(items[2]);
-                DetectMediaType(items[3]);
-                DetectMediaType(items[4]);
-                DetectMediaType(items[5]);
-                DetectMediaType(items[6]);
+                DetectMediaType(mediaLibrary.GetItemAt(0));
+                DetectMediaType(mediaLibrary.GetItemAt(1));
+                DetectMediaType(mediaLibrary.GetItemAt(2));
+                DetectMediaType(mediaLibrary.GetItemAt(3));
+                DetectMediaType(mediaLibrary.GetItemAt(4));
+                DetectMediaType(mediaLibrary.GetItemAt(5));
+                DetectMediaType(mediaLibrary.GetItemAt(6));
                 Console.WriteLine(" ");
 
-                Display(items[0]);
-                Display(items[1]);
-                Display(items[2]);
-                Display(items[3]);
-                Display(items[4]);
-                Display(items[5]);
-                Display(items[6]);
+                Display(mediaLibrary.GetItemAt(0));
+                Display(mediaLibrary.GetItemAt(1));
+                Display(mediaLibrary.GetItemAt(2));
+                Display(mediaLibrary.GetItemAt(3));
+                Display(mediaLibrary.GetItemAt(4));
+                Display(mediaLibrary.GetItemAt(5));
+                Display(mediaLibrary.GetItemAt(6));
                
                 // Console.WriteLine(album.GetDisplayText());
                 // Console.WriteLine(album1.GetDisplayText());
