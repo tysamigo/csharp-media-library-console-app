@@ -19,6 +19,10 @@ namespace project_csharp_media_library_console_app
             {
                 return null;
             }            
+
+            // This is the Ternary If Operator which can be used
+            //the above If Statement
+            // return (index < _items.Length) ? _items[index] : null;
         }
     }
 }
