@@ -12,10 +12,9 @@ namespace project_csharp_media_library_console_app
         // }
 
         public string Title { get; private set; }
-
-        public string YearReleased;
-        public string Loanee;
-        public bool OnLoan;
+        public string YearReleased { get; private set;}
+        public string Loanee { get; private set;} = "";
+        public bool OnLoan { get; private set;} = false;
 
         public MediaType(string title, string yearReleased)
         {

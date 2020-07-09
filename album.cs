@@ -2,7 +2,7 @@ namespace project_csharp_media_library_console_app
 {
     class Album : MediaType
     {
-        public readonly string Artist;        
+        public string Artist { get; private set; }        
 
         public Album(string title, string artist, string yearReleased) 
         : base(title, yearReleased)

@@ -2,7 +2,7 @@ namespace project_csharp_media_library_console_app
 {
     class Movie : MediaType
     {
-        public readonly string Director;
+        public string Director { get; private set; }
 
         public Movie(string title, string director, string yearReleased)
         : base(title, yearReleased)

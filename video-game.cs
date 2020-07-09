@@ -2,8 +2,8 @@ namespace project_csharp_media_library_console_app
 {
     class VideoGame : MediaType
     {
-        public readonly string Platform;
-        public readonly string Developers;
+        public string Platform { get; private set; }
+        public string Developers { get; private set; }
 
         public VideoGame(string title, string platform, string yearReleased, string developers)
         : base(title, yearReleased)

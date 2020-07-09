@@ -2,7 +2,7 @@ namespace project_csharp_media_library_console_app
 {
     class Book : MediaType
     {
-        public readonly string Author;
+        public string Author { get; private set; }
 
         public Book(string title, string author, string yearReleased)
         : base(title, yearReleased)
