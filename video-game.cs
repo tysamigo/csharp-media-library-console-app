@@ -12,23 +12,26 @@ namespace project_csharp_media_library_console_app
             Developers = developers;
         }
 
-        public string GetDisplayText()
+        public string DisplayText
         {
-            string text = "Video Game: " + '"' + Title + '"' + " by " + Developers + " for the " + Platform + " platform released in " + YearReleased;
-
-            if (OnLoan)
+            get
             {
-                if (!string.IsNullOrEmpty(Loanee))
-                {
-                    text += " - (Currently on loan to " + Loanee + ")";
-                }
-                else
-                {
-                    text += " - (Currently on loan)";
-                }                
-            }
+                string text = "Video Game: " + '"' + Title + '"' + " by " + Developers + " for the " + Platform + " platform released in " + YearReleased;
 
-            return text;
+                if (OnLoan)
+                {
+                    if (!string.IsNullOrEmpty(Loanee))
+                    {
+                        text += " - (Currently on loan to " + Loanee + ")";
+                    }
+                    else
+                    {
+                        text += " - (Currently on loan)";
+                    }
+                }
+
+                return text;
+            }
         }
     }
 }

@@ -10,23 +10,26 @@ namespace project_csharp_media_library_console_app
             Director = director;
         }
 
-        public string GetDisplayText()
+        public string DisplayText
         {
-            string text = "Movie: " + '"' + Title + '"' + " by " + Director + " released in " + YearReleased;
-
-            if (OnLoan)
+            get
             {
-                if (!string.IsNullOrEmpty(Loanee))
-                {
-                    text += " - (Currently on loan to " + Loanee + ")";
-                }
-                else
-                {
-                    text += " - (Currently on loan)";
-                }                
-            }
+                string text = "Movie: " + '"' + Title + '"' + " by " + Director + " released in " + YearReleased;
 
-            return text;
+                if (OnLoan)
+                {
+                    if (!string.IsNullOrEmpty(Loanee))
+                    {
+                        text += " - (Currently on loan to " + Loanee + ")";
+                    }
+                    else
+                    {
+                        text += " - (Currently on loan)";
+                    }
+                }
+
+                return text;
+            }
         }
     }
 }

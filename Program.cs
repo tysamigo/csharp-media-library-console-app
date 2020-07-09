@@ -86,22 +86,22 @@ namespace project_csharp_media_library_console_app
             {
                 // using Explicit Cast but don't understand
                 var album = (Album)item;
-                Console.WriteLine(album.GetDisplayText());                
+                // Console.WriteLine(album.GetDisplayText());                
             }
             else if (item is Book)
             {
                 var book = (Book)item;
-                Console.WriteLine(book.GetDisplayText());                
+                // Console.WriteLine(book.GetDisplayText());                
             }
             else if (item is Movie)
             {
                 var movie = (Movie)item;
-                Console.WriteLine(movie.GetDisplayText());                
+                // Console.WriteLine(movie.GetDisplayText());                
             }
             else if (item is VideoGame)
             {
                 var videoGame = (VideoGame)item;
-                Console.WriteLine(videoGame.GetDisplayText());                
+                // Console.WriteLine(videoGame.GetDisplayText());                
             }
             else
             {
