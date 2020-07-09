@@ -21,64 +21,22 @@ namespace project_csharp_media_library_console_app
                 
                 Console.WriteLine("There are " + mediaLibrary.NumberOfItems + " items currently in the Media Library");
                 
-                DetectMediaType(mediaLibrary.GetItemAt(0));
-                DetectMediaType(mediaLibrary.GetItemAt(1));
-                DetectMediaType(mediaLibrary.GetItemAt(2));
-                DetectMediaType(mediaLibrary.GetItemAt(3));
-                DetectMediaType(mediaLibrary.GetItemAt(4));
-                DetectMediaType(mediaLibrary.GetItemAt(5));
-                DetectMediaType(mediaLibrary.GetItemAt(6));
-                Console.WriteLine(" ");
+                mediaLibrary.DisplayItems();
 
-                Display(mediaLibrary.GetItemAt(0));
-                Display(mediaLibrary.GetItemAt(1));
-                Display(mediaLibrary.GetItemAt(2));
-                Display(mediaLibrary.GetItemAt(3));
-                Display(mediaLibrary.GetItemAt(4));
-                Display(mediaLibrary.GetItemAt(5));
-                Display(mediaLibrary.GetItemAt(6));
-                Display(mediaLibrary.GetItemAt(7));
+                // DetectMediaType(mediaLibrary.GetItemAt(0));
+                // DetectMediaType(mediaLibrary.GetItemAt(1));
+                // DetectMediaType(mediaLibrary.GetItemAt(2));
+                // DetectMediaType(mediaLibrary.GetItemAt(3));
+                // DetectMediaType(mediaLibrary.GetItemAt(4));
+                // DetectMediaType(mediaLibrary.GetItemAt(5));
+                // DetectMediaType(mediaLibrary.GetItemAt(6));
+                // Console.WriteLine(" ");                
             }
             catch(Exception ex)
             {
                 Console.WriteLine("Exception: " + ex.Message);
             }           
-        }
-
-        static void Display(MediaType item)
-        {
-            
-            if (item == null)
-            {
-                return;
-            }
-            
-            if (item is Album)
-            {
-                // using Explicit Cast but don't understand
-                var album = (Album)item;
-                // Console.WriteLine(album.GetDisplayText());                
-            }
-            else if (item is Book)
-            {
-                var book = (Book)item;
-                Console.WriteLine(book.DisplayText);                
-            }
-            else if (item is Movie)
-            {
-                var movie = (Movie)item;
-                Console.WriteLine(movie.DisplayText);                
-            }
-            else if (item is VideoGame)
-            {
-                var videoGame = (VideoGame)item;
-                Console.WriteLine(videoGame.DisplayText);                
-            }
-            else
-            {
-                throw new Exception("Unexpected media subtype encountered");
-            }
-        }
+        }        
 
         static void DetectMediaType(MediaType item)
         {
