@@ -4,6 +4,16 @@ namespace project_csharp_media_library_console_app
     {
         private MediaType[] _items;
 
+        // public int NumberOfItems => _items.Length;
+
+        public int NumberOfItems
+        {
+            get
+            {
+                return _items.Length;
+            }
+        }
+        
         public MediaLibrary(MediaType[] items)
         {
             _items = items;
