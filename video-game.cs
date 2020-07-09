@@ -16,21 +16,8 @@ namespace project_csharp_media_library_console_app
         {
             get
             {
-                string text = "Video Game: " + '"' + Title + '"' + " by " + Developers + " for the " + Platform + " platform released in " + YearReleased;
+                return "Album: " + '"' + Title + '"' + " by " + Developers + " released in " + YearReleased + OnLoanDisplayText;
 
-                if (OnLoan)
-                {
-                    if (!string.IsNullOrEmpty(Loanee))
-                    {
-                        text += " - (Currently on loan to " + Loanee + ")";
-                    }
-                    else
-                    {
-                        text += " - (Currently on loan)";
-                    }
-                }
-
-                return text;
             }
         }
     }

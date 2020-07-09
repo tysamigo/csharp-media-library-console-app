@@ -14,21 +14,8 @@ namespace project_csharp_media_library_console_app
         {
             get
             {
-                string text = "Movie: " + '"' + Title + '"' + " by " + Director + " released in " + YearReleased;
+                return "Album: " + '"' + Title + '"' + " by " + Director + " released in " + YearReleased + OnLoanDisplayText;
 
-                if (OnLoan)
-                {
-                    if (!string.IsNullOrEmpty(Loanee))
-                    {
-                        text += " - (Currently on loan to " + Loanee + ")";
-                    }
-                    else
-                    {
-                        text += " - (Currently on loan)";
-                    }
-                }
-
-                return text;
             }
         }
     }
