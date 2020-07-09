@@ -16,7 +16,7 @@ namespace project_csharp_media_library_console_app
         {
             get
             {
-                return "Album: " + '"' + Title + '"' + " by " + Developers + " released in " + YearReleased + OnLoanDisplayText;
+                return "Video Game: " + '"' + Title + '"' + " by " + Developers + " released in " + YearReleased + OnLoanDisplayText;
 
             }
         }
