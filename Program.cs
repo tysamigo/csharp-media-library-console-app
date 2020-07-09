@@ -19,6 +19,8 @@ namespace project_csharp_media_library_console_app
                     new VideoGame("Call of Duty", "Xbox", "2003", "Activision")
                 });                         
                 
+                Console.WriteLine(mediaLibrary.NumberOfItems);
+                
                 DetectMediaType(mediaLibrary.GetItemAt(0));
                 DetectMediaType(mediaLibrary.GetItemAt(1));
                 DetectMediaType(mediaLibrary.GetItemAt(2));
@@ -36,37 +38,6 @@ namespace project_csharp_media_library_console_app
                 Display(mediaLibrary.GetItemAt(5));
                 Display(mediaLibrary.GetItemAt(6));
                 Display(mediaLibrary.GetItemAt(7));
-               
-                // Console.WriteLine(album.GetDisplayText());
-                // Console.WriteLine(album1.GetDisplayText());
-                // Console.WriteLine(book.GetDisplayText());
-                // Console.WriteLine(movie.GetDisplayText());
-                // Console.WriteLine(movie1.GetDisplayText());
-                // Console.WriteLine(videoGame.GetDisplayText());
-                // Console.WriteLine(videoGame1.GetDisplayText());
-                // Console.WriteLine(" ");
-
-                // album.LoanMedia("Tyler Ramage");
-                // album1.LoanMedia();
-                // movie1.LoanMedia("Lacey Ramage");
-                // videoGame1.LoanMedia("Tyler Ramage");
-
-
-                // Console.WriteLine(album.GetDisplayText());
-                // Console.WriteLine(album1.GetDisplayText());
-                // Console.WriteLine(movie1.GetDisplayText());
-                // Console.WriteLine(videoGame1.GetDisplayText());
-                // Console.WriteLine(" ");
-
-                // album.ReturnMedia();
-                // album1.ReturnMedia();
-                // movie1.ReturnMedia();
-                // videoGame1.ReturnMedia();
-
-                // Console.WriteLine(album.GetDisplayText());
-                // Console.WriteLine(album1.GetDisplayText());
-                // Console.WriteLine(movie1.GetDisplayText());
-                // Console.WriteLine(videoGame1.GetDisplayText());
             }
             catch(Exception ex)
             {
