@@ -91,17 +91,17 @@ namespace project_csharp_media_library_console_app
             else if (item is Book)
             {
                 var book = (Book)item;
-                // Console.WriteLine(book.GetDisplayText());                
+                Console.WriteLine(book.DisplayText);                
             }
             else if (item is Movie)
             {
                 var movie = (Movie)item;
-                // Console.WriteLine(movie.GetDisplayText());                
+                Console.WriteLine(movie.DisplayText);                
             }
             else if (item is VideoGame)
             {
                 var videoGame = (VideoGame)item;
-                // Console.WriteLine(videoGame.GetDisplayText());                
+                Console.WriteLine(videoGame.DisplayText);                
             }
             else
             {
