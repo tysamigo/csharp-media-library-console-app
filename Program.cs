@@ -19,7 +19,7 @@ namespace project_csharp_media_library_console_app
                     new VideoGame("Call of Duty", "Xbox", "2003", "Activision")
                 });                         
                 
-                Console.WriteLine(mediaLibrary.NumberOfItems);
+                Console.WriteLine("There are " + mediaLibrary.NumberOfItems + " items currently in the Media Library");
                 
                 DetectMediaType(mediaLibrary.GetItemAt(0));
                 DetectMediaType(mediaLibrary.GetItemAt(1));
