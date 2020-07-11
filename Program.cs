@@ -17,11 +17,22 @@ namespace project_csharp_media_library_console_app
                     new Movie("Battlestar Galactica", "Ronald D. Moore", "1978"),
                     new VideoGame("Halo", "Xbox", "2001", "Bungie"),   
                     new VideoGame("Call of Duty", "Xbox", "2003", "Activision")
-                });                         
+                });
+
+                var item = mediaLibrary.FindItem("Halo");
+
+                if (item != null)
+                {
+                    Console.WriteLine("The following item has been found: ");
+                    MediaLibrary.DisplayItem(item);                    
+                }                         
+                else
+                {
+                    Console.WriteLine("Item not found.  Please try again.");
+                }
+                // Console.WriteLine("There are " + mediaLibrary.NumberOfItems + " items currently in the Media Library");
                 
-                Console.WriteLine("There are " + mediaLibrary.NumberOfItems + " items currently in the Media Library");
-                
-                mediaLibrary.DisplayItems();
+                // mediaLibrary.DisplayItems();
 
                 // DetectMediaType(mediaLibrary.GetItemAt(0));
                 // DetectMediaType(mediaLibrary.GetItemAt(1));
