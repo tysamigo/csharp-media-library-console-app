@@ -21,6 +21,22 @@ namespace project_csharp_media_library_console_app
             _items = items;
         }
 
+        public MediaType FindItem(string criteria)
+        {
+            MediaType itemToReturn = null;
+
+            foreach(var item in _items)
+            {
+                if(item.Title.ToLower().Contains(criteria.ToLower()))
+                {
+                    itemToReturn = item;
+                    break;
+                }
+            }
+
+            return itemToReturn;
+        }
+        
         public void DisplayItems()
         {
             for (int i = 0; i < _items.Length; i++)
